@@ -46,7 +46,8 @@
       "^.+\\.js?$": "babel-jest"
     },
     "transformIgnorePatterns": [
-      "!node_modules/react-runtime"
+      "!node_modules/react-runtime",
+      "!client/components/"
     ]
   }
 }
