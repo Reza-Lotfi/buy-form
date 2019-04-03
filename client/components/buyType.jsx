@@ -18,8 +18,8 @@ class BuyType extends React.Component {
 
     render() {
         return (
-        <div className="app_buySellTitleButton">
-             <svg  onClick={() => {this.toggleDropDown()}} width="28" height="28" viewBox="0 0 28 28">
+        <div className="app_buySellTitleButton" onClick={() => {this.toggleDropDown()}}>
+             <svg width="28" height="28" viewBox="0 0 28 28">
                  <path fillRule="evenodd" d="M14,16 C12.8954305,16 12,15.1045695 12,
                     14 C12,12.8954305 12.8954305,12 14,12 C15.1045695,12 16,12.8954305 16,
                     14 C16,15.1045695 15.1045695,16 14,16 Z M6,16 C4.8954305,16 4,15.1045695 4,
