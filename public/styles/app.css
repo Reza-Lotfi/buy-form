@@ -8,6 +8,7 @@
 
 .app_buySellBody {
     content: 275px 354px;
+    overflow: auto;
     padding: 24px 24px;
     top : 95px;
     width: 275.3px;
@@ -19,19 +20,42 @@
     letter-spacing: 0.25px;
     fill : #171718;
     border-radius: 2px;
-    position: fixed;
+    position: sticky;
+    align-items: center;
     -webkit-box-align: center;
     flex-direction: column;
     box-shadow: rgba(0, 0, 0, 0.01) 0px 0px 4px 1px, rgba(48, 51, 51, 0.09) 0px 3px 24px 0px;
+    /* display: flex;
+    justify-content: space-between; */
 }
 
-.app_buySellTitle {
-   content: 227px 47px;
-   height: 100%;    
-   padding-top: 12px;
-   margin-right: 12px;
-   display: block;
-   transition: border-color 250ms, color 250ms;
+.app_buySellTitle {  
+   /* transition: border-color 250ms, color 250ms; */
+   width:50%;
+   float: left;
   
-   
+     
+}
+
+.app_buySellTitleButton {  
+  width: 50%; 
+  float: left;
+ 
+}
+
+.buySell_buy-type_dropdown_option:hover, .app_buySellTitleButton:hover {
+  fill: #21c399;
+}
+
+#app_buySellTitleDropdown {
+  content: 180px 306px;
+  top: 95px;
+  box-shadow: rgba(0, 0, 0, 0.01) 0px 0px 4px 1px, rgba(48, 51, 51, 0.09) 0px 3px 24px 0px;
+  /* margin : 24px 24px; */
+}
+
+#app_buySellOrderTypeTitle {
+  border-radius: 2px;
+  padding : 0px;
+  box-shadow: rgba(0, 0, 0, 0.01) 0px 0px 4px 1px, rgba(48, 51, 51, 0.09) 0px 3px 24px 0px;
 }

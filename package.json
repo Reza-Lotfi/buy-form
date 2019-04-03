@@ -8,7 +8,8 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "seed": "node database-mongodb/seed.js"
   },
   "dependencies": {
     "babel-preset-env": "^1.7.0",
