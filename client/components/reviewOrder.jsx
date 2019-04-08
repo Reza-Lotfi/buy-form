@@ -5,6 +5,11 @@ import ReviewInfo from './reviewInfo.jsx';
 class ReviewOrder extends React.Component {
     constructor(props) {
         super(props);
+
+        this.sectionStyle = {
+            
+            transitionDuration: '300ms',           
+        }
         
         this.state = {
             sharesNum : 'none',
@@ -49,10 +54,15 @@ class ReviewOrder extends React.Component {
         return(
             <div className='reviewOrder_buySell_closedUp'>
                 <div className='reviewOrder_buySell_section'>
+                    <div className='reviewInfo_buySell_transitionSection' style={this.sectionStyle}>
+                        <div className='reviewInfo_buySell_reviewSection'>
+                            <div>
                 { this.state.infoRendered &&
                     <ReviewInfo sharesNum={this.state.sharesNum} />
                 }
-                    <div>
+                            </div>
+                        </div>
+                    </div>
                         <div className='reviewOrder_buySell_buttonSection'>
                         
                             <button type='button' onClick={this.clickHandler.bind(this)}className='reviewOrder_buySell_button'>                           
@@ -66,7 +76,7 @@ class ReviewOrder extends React.Component {
                                 </div>
                             }
                         </div>
-                    </div>
+                   
                 </div>
             </div>
         )

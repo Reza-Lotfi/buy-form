@@ -3,9 +3,6 @@ import React from 'react';
 class ReviewInfo extends React.Component {
     constructor(props) {
         super(props);
-        this.sectionStyle = {
-            transitionDuration : '300ms',           
-        }
 
         this.contentStyle = {
             transition: '250ms',
@@ -15,9 +12,8 @@ class ReviewInfo extends React.Component {
 
     render() {
        return (
-           <div className='reviewInfo_buySell_transitionSection' style={this.sectionStyle}>
-           {console.log(this.props.sharesNum)}
-                <div className='reviewInfo_buySell_reviewSection'>                      
+
+                                      
                         <div className='reviewInfo_buySell_contentSection'>
                             <div className='reviewInfo_buySell_upperContentSection' style={this.contentStyle}>
                                 <h4 className='reviewInfo_buySell_title'>
@@ -44,8 +40,8 @@ class ReviewInfo extends React.Component {
                                 
                             </div>
                         </div>                   
-                </div>
-           </div>
+                
+           
        );
     }
 }

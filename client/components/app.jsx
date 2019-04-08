@@ -7,6 +7,7 @@ import EstimatedCost from './estimatedCost.jsx';
 import CheckBox from './checkBox.jsx';
 import ReviewOrder from './reviewOrder.jsx';
 import BuyingPower from './buyingPower.jsx';
+import DropDownInput from './dropDownInput.jsx';
 
 
 class App extends React.Component {
@@ -36,11 +37,10 @@ class App extends React.Component {
     }
 
     changeMode(event) {
-        
+        console.log('trim', event.target.textContent.trim())
         this.setState({
-            mode : event.target.textContent
-        },
-        function() {console.log(this.state.mode)}
+            mode : event.target.textContent.trim()
+        }
         )
         
     }
@@ -58,16 +58,56 @@ class App extends React.Component {
     }
 
     render() {
+        var midContent;
+        console.log(this.state.mode)
+        if(this.state.mode === 'Market Order') {
+            midContent = 
+            (
+            <div className='app_buySell_orderInfo'>
+                                
+                <Shares handleChange={this.handleShares.bind(this)}/>
+                <Pricing price={this.state.price}/>
+                <EstimatedCost price={this.state.price} handleCost={this.state.shares}/>              
+            </div>
+            )
+        } else if(this.state.mode === 'Limit Order') {
+
+            midContent = (
+                <div>
+                    <Shares title='Limit Price' placeHolder={'$0.00'} />
+                    <Shares handleChange={this.handleShares.bind(this)}/>
+                    <DropDownInput />
+                    <Pricing />
+                    <EstimatedCost price={this.state.price} handleCost={this.state.shares} />
+                </div>
+            )
+            
+
+        } else if(this.state.mode === 'Stop Loss Order') {
+            midContent = (
+                <div>
+                    <Shares title='Stop Price' placeHolder={'$0.00'}/>
+                    <Shares handleChange={this.handleShares.bind(this)}/>
+                    <DropDownInput />
+                    <EstimatedCost price={this.state.price} handleCost={this.state.shares} />
+                </div>
+            )
+        } else {
+            midContent = (
+                <div>
+                    <Shares title='Stop Price' placeHolder={'$0.00'}/>
+                    <Shares handleChange={this.handleShares.bind(this)}/>
+                    <DropDownInput />
+                    <EstimatedCost price={this.state.price} handleCost={this.state.shares} />
+                </div>
+            )
+        }
         return (
             <form className='app_buySell_orderForm'>
                <div className='app_buySell_cardHeader'>
                    <StockTitle changeMode={this.changeMode.bind(this)}/>
                </div> 
-               <div className='app_buySell_orderInfo'>
-                        <Shares handleShares={this.handleShares.bind(this)}/>
-                        <Pricing price={this.state.price}/>
-                        <EstimatedCost price={this.state.price} handleCost={this.state.shares}/>
-               </div>
+               {midContent}
                <CheckBox />
                <ReviewOrder price={this.state.price} sharesNum={this.state.shares}/>
                <BuyingPower />

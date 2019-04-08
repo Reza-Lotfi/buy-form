@@ -10,17 +10,18 @@ class BuyType extends React.Component {
         }
     }
 
-    toggleDropDown() {
-        
-        this.setState({
-            dropDownActive : !this.state.dropDownActive
-        })
-        
+    toggleDropDown(e) {    
+            this.setState({
+                dropDownActive : !this.state.dropDownActive
+            })
+                  
     }
+
+    
 
     render() {
         return (
-        <div className="buyType_buySell_button" onClick={() => {this.toggleDropDown()}}>
+        <div className="buyType_buySell_button" onClick={(e) => {this.toggleDropDown(e)}}>
              <svg width="28" height="28" viewBox="0 0 28 28">
                  <path fillRule="evenodd" d="M14,16 C12.8954305,16 12,15.1045695 12,
                     14 C12,12.8954305 12.8954305,12 14,12 C15.1045695,12 16,12.8954305 16,
