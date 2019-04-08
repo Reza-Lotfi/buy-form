@@ -11,15 +11,18 @@ class StockTitle extends React.Component {
 
     render() {
         return (
-            <div>
-                 <div className='app_buySellTitle'>               
-                    <h3 >Buy AAPL</h3>                  
+            <header className='title_buySell_section'>
+                <div className='title_buySell_title'>
+                    Buy AAPL
                 </div>
-                <BuyType />
-            </div>
+                
+                    <BuyType changeMode={this.props.changeMode}/>
+               
+            </header>
         );
     }
 };
 
 export default StockTitle;
 
+{/* <BuyType clickHandler={this.props.clickHandler.bind(this)}/> */}

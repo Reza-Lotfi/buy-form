@@ -1,5 +1,7 @@
 import React from 'react';
 
+import DropDown from './dropDownMenu.jsx';
+
 class BuyType extends React.Component {
     constructor(props) {
         super(props);
@@ -18,7 +20,7 @@ class BuyType extends React.Component {
 
     render() {
         return (
-        <div className="app_buySellTitleButton" onClick={() => {this.toggleDropDown()}}>
+        <div className="buyType_buySell_button" onClick={() => {this.toggleDropDown()}}>
              <svg width="28" height="28" viewBox="0 0 28 28">
                  <path fillRule="evenodd" d="M14,16 C12.8954305,16 12,15.1045695 12,
                     14 C12,12.8954305 12.8954305,12 14,12 C15.1045695,12 16,12.8954305 16,
@@ -30,15 +32,7 @@ class BuyType extends React.Component {
              </svg>
              {
                  this.state.dropDownActive &&
-                 <div id='app_buySellTitleDropdown'>
-                    <div>
-                        <h3 id='app_buySellOrderTypeTitle'>Order Type</h3>
-                    </div>
-                    <p className='buySell_buy-type_dropdown_option'>Market Order</p>
-                    <p className='buySell_buy-type_dropdown_option'>Limit Order</p>
-                    <p className='buySell_buy-type_dropdown_option'>Stop Loss Order</p>
-                    <p className='buySell_buy-type_dropdown_option'>Stop Limit Order</p>
-                </div>
+                 <DropDown changeMode={this.props.changeMode}/>
              }
         </div>
         );
