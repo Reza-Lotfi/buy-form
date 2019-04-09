@@ -5,34 +5,34 @@
 
 @font-face {
     font-family: system;
-    src: url('/styles/fonts/FF_DIN_Pro_Regular_Italic.otf');
+    src: url('./fonts/FF_DIN_Pro_Regular_Italic.otf');
 }
 
 @font-face {
     font-family: system;
     font-weight: 700;
     
-    src: url('/styles/fonts/FF_DIN_Pro_Bold_Italic.otf');
+    src: url('./fonts/FF_DIN_Pro_Bold_Italic.otf');
 
 }
 
 @font-face {
     font-family: system;
     font-weight: 100;
-    src: url('/styles/fonts/FF_DIN_Pro_Light_Italic.otf');
+    src: url('./fonts/FF_DIN_Pro_Light_Italic.otf');
 
 }
 
 @font-face {
     font-family: system;
     font-weight: 900;
-    src: url('/styles/fonts/FF_DIN_Pro_Black_Italic.otf');
+    src: url('./fonts/FF_DIN_Pro_Black_Italic.otf');
 }
 
 @font-face {
     font-family: system;
     font-weight: 500;
-    src: url('/styles/fonts/FF_DIN_Pro_Medium_Italic.otf')
+    src: url('./fonts/FF_DIN_Pro_Medium_Italic.otf')
 
 }
 
