@@ -72,7 +72,7 @@ class ReviewOrder extends React.Component {
                             {
                                 (this.state.infoRendered && (this.state.sharesNum > 0)) && 
                                 <div>
-                                    <button type='button' onClick={this.clickHandler.bind(this)} className='reviewOrder_buySell_backButton'><span>Back     </span></button>
+                                    <button type='button' onClick={this.clickHandler.bind(this)} className='reviewOrder_buySell_backButton'><span id='reviewOrder_buySell_backSpan'>Back</span></button>
                                 </div>
                             }
                         </div>

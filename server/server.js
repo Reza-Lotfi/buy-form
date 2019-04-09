@@ -1,5 +1,6 @@
 var express = require('express');
 var bodyParser  = require('body-parser');
+var cors = require('cors');
 var mongoose = require('mongoose');
 var db = require('../database-mongodb/index.js');
 var Stock = require('../database-mongodb/Stock.js');
@@ -7,7 +8,9 @@ var Stock = require('../database-mongodb/Stock.js');
 var port = 4567;
 var app = express();
 
+
 //middleware
+app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 

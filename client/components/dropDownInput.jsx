@@ -35,7 +35,7 @@ class DropDownInput extends React.Component {
             <div className='dropDownInput_buySell_component'>
                     Expiration
                     <div className='dropDownInput_buySell_inputSection'>
-                        <label>
+                        <label id='dropDownInput_buySell_label'>
                             <div>
                                 <div className='dropDownInput_buySell_inputDiv'>
                                     <input className='dropDownInput_buySell_input' type='hidden' name='time_in_force' value='gfd'></input>
