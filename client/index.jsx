@@ -5,6 +5,6 @@ import React from 'react';
 
 
 
-ReactDom.render(<App />, document.getElementById('app'));
+ReactDom.render(<App />, document.getElementById('buy-sell'));
 
 

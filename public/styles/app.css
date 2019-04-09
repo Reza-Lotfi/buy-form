@@ -1,7 +1,7 @@
-*, *::before, *::after {
+/* *, *::before, *::after {
     -webkit-box-sizing: inherit;
     box-sizing: inherit;
-}
+} */
 
 @font-face {
     font-family: system;
@@ -36,7 +36,9 @@
 
 }
 
-label, span, .estimatedCost_buySell_price {
+#reviewOrder_buySell_backSpan, #shares_buySell_label, .reviewOrder_buySell_buttonDescription, .estimatedCost_buySell_title, .dropDownInput_buySell_selectArrow, 
+.dropDownInput_buySell_selectArrowZone, .dropDownInput_buySell_selectValueLabel, .dropDownInput_buySell_selectMultiValue, 
+#dropDownInput_buySell_label, #checkBox_buySell_description, .estimatedCost_buySell_price {
     align-items: center;
     display: flex;
     height: 48px;
@@ -60,7 +62,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .app_buySell_orderForm {
-    
+    float: right;
     width: 275.3px;
     min-height: 100px;
     overflow: hidden;

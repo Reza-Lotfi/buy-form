@@ -22,7 +22,8 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        var url = '/stocks/AAPL'
+        var proxyUrl = 'http://127.0.0.1:3001/'
+        var url = 'http://127.0.0.1:4567/stocks/AAPL'
         var appThis = this;
         fetch(url)
         .then(response => {
